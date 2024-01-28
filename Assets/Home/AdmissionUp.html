@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slick Slider Example</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="animation.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #0e2d63;
+        margin: 0;
+      }
+      .navbar {
+        background-color: #f2f2f2;
+        padding: 10px;
+      }
+      .slick-dots li.slick-active button:before {
+        color: #ffffff;
+      }
+      .slick-slider {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+        margin-top: -10vh;
+      }
+
+      .slick-slide {
+        width: 300px;
+        height: 130px;
+        max-width: 100%;
+        padding: 10px;
+        margin: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        color: #4c586f;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 50);
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      /* Define the animation for when the slide comes into view */
+      .animate-slide {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .slick-slide h2 {
+        font-size: 20px;
+      }
+
+      .slick-slide a {
+        font-size: 17px;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(6, 6, 163);
+      }
+
+      /* Add keyframe animation for the sections coming from the bottom */
+      @keyframes slideInFromBottom {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Add keyframe animation for the navbar coming from the bottom */
+      @keyframes slideInNavbarFromBottom {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Add animation to the .ani section */
+      .ani {
+        animation: slideInFromBottom 1s ease-in-out;
+      }
+
+      /* Add animation to the .navbar section */
+      .navbar.ani {
+        animation: slideInNavbarFromBottom 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ani navbar">
+      <!-- Add the 'ani' class here to apply the animation -->
+      <div class="navbar">
+        <!-- Your navigation bar content goes here -->
+        <h3 style="text-align: center; font-size: 40px">Admission Updates</h3>
+        <hr
+          style="
+            width: 10%;
+            margin: 0 auto;
+            background-color: #0e2d63;
+            height: 2px;
+            margin-bottom: 5px;
+          "
+        />
+        <p style="text-align: center; font-size: 22px">
+          Check out the latest updates about the 2023-24 Admission Process
+        </p>
+        <br /><br />
+      </div>
+    </div>
+    <div class="ani">
+      <!-- Add the 'ani' class here to apply the animation -->
+      <div class="slick-slider">
+        <div class="slick-slide">
+          <h2>FYJC Minority Quota Admission 2023-24 <br /><br /></h2>
+          <a href="#">Know More</a>
+        </div>
+        <div class="slick-slide">
+          <h2 style="margin-bottom: 40px">
+            FYJC Admission 2023-24 <br /><br />
+          </h2>
+          <a href="#">Know More</a>
+        </div>
+        <div class="slick-slide">
+          <h2 style="margin-bottom: 40px">
+            FY UG Admission Process 2023-24 <br />
+          </h2>
+          <a href="#">Know More</a>
+        </div>
+        <div class="slick-slide">
+          <h2 style="margin-bottom: 40px">FY PG Admission Process 2023-24</h2>
+          <a href="#">Know More</a>
+        </div>
+        <div class="slick-slide">
+          <h2 style="margin-bottom: 40px">M.A Liberal Studies <br /><br /></h2>
+          <a href="#">Know More</a>
+        </div>
+        <div class="slick-slide">
+          <h2 style="margin-bottom: 40px">
+            B.Sc. in Data Science and Business Analytics <br />
+          </h2>
+          <a href="#">Know More</a>
+        </div>
+        <div class="slick-slide">
+          <h2 style="margin-bottom: 40px">Certificate Courses <br /><br /></h2>
+          <a href="#">Know More</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      // The Intersection Observer to apply the animation class to the navbar and the slider
+      const slides = document.querySelectorAll(".slick-slide");
+      const navbar = document.querySelector(".navbar");
+
+      const observerOptions = {
+        threshold: 0.5,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-slide");
+          } else {
+            entry.target.classList.remove("animate-slide");
+          }
+        });
+      }, observerOptions);
+
+      observer.observe(navbar);
+
+      slides.forEach((slide) => {
+        observer.observe(slide);
+      });
+
+      // Initialize the Slick Slider
+      $(document).ready(function () {
+        $(".slick-slider").slick({
+          arrows: false,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2500,
+          infinite: true,
+          pauseOnHover: false, // To keep autoplay even when hovering over the slider
+          centerMode: false, // Enable center mode for seamless scrolling // Allow slides to have variable width for a seamless effect
+          slidesToShow: 3, // Show three slides at a time (adjust this value as needed)
+          slidesToScroll: 2, // Scroll one slide at a time (adjust this value as needed)
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+
+      // Pause and resume autoplay on click
+      $(".slick-slider").on("click", function () {
+        $(this).slick("slickPause");
+        setTimeout(function () {
+          $(".slick-slider").slick("slickPlay");
+        }, 2000); // Adjust the delay (in milliseconds) before resuming autoplay after click
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stylish Notice Board</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fefefe;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #fcfafa;
+      }
+      .wrapper {
+        position: absolute;
+        width: 30vw;
+        transform: translate(-50%, -50%);
+        top: 45%;
+        left: 55%;
+        display: flex;
+        justify-content: space-around;
+        gap: 5px;
+      }
+      .container {
+        width: 35vmin;
+        height: 30vmin;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0.1em 0;
+        position: relative;
+        font-size: 15.5px;
+        border-radius: 0.5em;
+        background-color: #21242b;
+        border-bottom: 10px solid #1f5ac1;
+        margin-top: 30px;
+      }
+      i {
+        color: #00aaff;
+        font-size: 2.5em;
+        text-align: center;
+      }
+      span.num {
+        color: #ffffff;
+        display: grid;
+        place-items: center;
+        font-weight: 600;
+        font-size: 2.5em;
+      }
+      span.text {
+        color: #e0e0e0;
+        font-size: 0.99em;
+        text-align: center;
+        pad: 0.3em 0;
+        font-weight: 400;
+        line-height: 0;
+      }
+      @media screen and (max-width: 1024px) {
+        .wrapper {
+          width: 85vw;
+        }
+        .container {
+          height: 24vmin;
+          width: 24vmin;
+          font-size: 12px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .wrapper {
+          width: 90vw;
+          flex-wrap: wrap;
+          gap: 30px;
+        }
+        .container {
+          width: calc(50% - 40px);
+          height: 30vmin;
+          font-size: 14px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .wrapper {
+          gap: 15px;
+        }
+        .container {
+          width: 100%;
+          height: 25vmin;
+          font-size: 8px;
+        }
+      }
+      .notice-board {
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+        justify-content: center;
+        min-height: 80vh;
+        margin-top: 40px;
+        margin-left: 40px;
+      }
+
+      .outer-box {
+        max-width: 500px;
+        width: 40%;
+        border: 2px solid #0e2d63;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        min-height: 300px;
+      }
+
+      .inner-box {
+        max-height: 300px;
+        padding: 20px;
+        overflow-y: auto;
+        scroll-behavior: smooth; /* Enable smooth scrolling */
+      }
+
+      .box-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #0e2d63;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .notice {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .notice h2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: #0e2d63;
+        border-radius: 50%;
+      }
+
+      .notice h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: #a51f16;
+      }
+
+      .notice p {
+        font-size: 14px;
+        color: #333;
+      }
+
+      .notice:last-child {
+        margin-bottom: 0;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        min-height: 60vh;
+        background-color: #f5f5f5;
+      }
+
+      .container2 {
+        margin-right: 20px; /* Add space between card and right edge */
+        margin-top: -25%;
+        margin-left: 73%;
+      }
+      .card {
+        width: 320px;
+        height: 300px;
+        background-color: #0e2d63;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .tabs {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0 -10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .tab {
+        padding: 10px 15px;
+        cursor: pointer;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        background-color: #cecece;
+        color: #333;
+      }
+
+      .tab.active {
+        background-color: #fff;
+        border-bottom: 1px solid #fff;
+        color: #555;
+      }
+
+      .tab-content {
+        display: none;
+        padding: 19px;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+        background-color: #fff;
+        color: #333;
+        height: 210px;
+        font-weight: 550;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+      .list1 {
+        line-height: 1.7;
+        color: #0e2d63;
+        font-family: "PatuaOne-Regular";
+        
+      }
+    </style>
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="notice-board">
+        <div class="outer-box">
+          <div class="box-title">Notices / Announcements</div>
+          <div class="inner-box" id="drag-inner-box">
+            <div class="notice">
+              <h2>Dear Alumni, Click Here to Get Connected</h2>
+              <p>
+                Stay connected with your alma mater and receive updates on
+                events and opportunities by joining our alumni network.
+              </p>
+            </div>
+            <div class="notice">
+              <h2>MSc Chemistry 2nd Merit List (Aided)</h2>
+              <p>
+                The 2nd merit list for MSc Chemistry (Aided) is now available.
+                Admitted candidates must complete the admission process by the
+                specified date.
+              </p>
+            </div>
+            <div class="notice">
+              <h2>NCC 8 MAH Girls BN Enrolment</h2>
+              <p>
+                Female students can enroll in NCC 8 Maharashtra Girls Battalion
+                to develop leadership skills and contribute to the community.
+              </p>
+            </div>
+            <div class="notice">
+              <h2>Commencement of FY Lectures (Aided)</h2>
+              <p>
+                The lectures for First Year (FY) students in aided courses will
+                commence from 20/08/2023.
+              </p>
+            </div>
+            <div class="notice">
+              <h2>Upcoming Event: Cultural Fest 2023</h2>
+              <p>
+                Join us for the annual Cultural Fest on
+                <strong>25th - 27th September 2023</strong>. Experience music,
+                dance, drama, and art, celebrating diversity and creativity. Be
+                part of this unforgettable event!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div>
+          <div class="container">
+            <i class="fas fa-book"></i>
+            <span class="num" data-val="40">0</span>
+            <span class="text">Courses Offered</span>
+          </div>
+          <div class="container">
+            <i class="fas fa-award"></i>
+            <span class="num" data-val="90">000</span>
+            <span class="text">Awards&nbsp;& Recognitions</span>
+          </div>
+        </div>
+        <div>
+          <div class="container">
+            <i class="fas fa-flask"></i>
+            <span class="num" data-val="135">000</span>
+            <span class="text">Research&nbsp;& Publications</span>
+          </div>
+          <div class="container">
+            <i class="fas fa-user-graduate"></i>
+            <span class="num" data-val="3000">0000</span>
+            <span class="text">Students</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container2">
+        <div class="card">
+          <ul class="tabs">
+            <li class="tab active">Co-curricular</li>
+            <li class="tab">Extra curricular</li>
+            <li class="tab">Sports</li>
+          </ul>
+
+          <div class="tab-content active">
+            <ul class="list1">
+              <li>
+                Heartiest Congratulations to Ms. Suhani Mahes... (22 Jul 2023)
+              </li>
+              <li>
+                Heartiest Congratulations to Mr. Nimish Deshm...(20 August 2023)
+              </li>
+              <li>ECOCON 2021-22 Achievement (07 August 2023)</li>
+            </ul>
+          </div>
+          <div class="tab-content">
+            <ul class="list1">
+              <li>
+                Hearty congratulations to the entire Youth Fe... 16 Jun 2023
+              </li>
+              <li>Hearty congratulations to our students 11 Apr 2023</li>
+              <li>
+                Winners of Youth Festival 20223-24 at State a... 09 Jun 2023
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content">
+            <ul class="list1">
+              <li>
+                Inter College TABLE TENNIS TOURNAMENT 2023-20... 26 Aug 2023
+              </li>
+              <li>
+                Inter-University West zone Table Tennis tourn... 17 Sep 2023
+              </li>
+              <li>
+                Heartiest Congratulations to Ms. Srushti Hale... 21 Jul 2022
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <script>
+        const tabs = document.querySelectorAll(".tab");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => {
+            tabs.forEach((t) => t.classList.remove("active"));
+            tabContents.forEach((content) =>
+              content.classList.remove("active")
+            );
+
+            tab.classList.add("active");
+            tabContents[index].classList.add("active");
+          });
+        });
+      </script>
+    </section>
+    <script>
+      let valueDisplays = document.querySelectorAll(".num");
+      let interval = 1000;
+
+      valueDisplays.forEach((valueDisplay) => {
+        let startValue = 0;
+        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+        let counter = setInterval(function () {
+          startValue += 1;
+          valueDisplay.textContent = startValue;
+          if (startValue == endValue) {
+            clearInterval(counter);
+          }
+        }, duration);
+      });
+    </script>
+    <script>
+      function autoScroll() {
+        const noticeContainer = document.getElementById("drag-inner-box");
+        const firstNotice = noticeContainer.querySelector(".notice");
+        const totalScrollDistance = noticeContainer.scrollHeight;
+        let scrollDistance = 0;
+        const scrollInterval = setInterval(() => {
+          scrollDistance += 1;
+          noticeContainer.scrollTop = scrollDistance;
+          if (scrollDistance >= totalScrollDistance) {
+            scrollDistance = 0;
+            noticeContainer.scrollTop = 0;
+          }
+        }, 50);
+        setTimeout(() => {
+          clearInterval(scrollInterval);
+          autoScroll();
+        }, 15000);
+      }
+      window.onload = () => {
+        autoScroll();
+      };
+    </script>
+  </body>
+</html>
