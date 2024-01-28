@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="regis.css" />
+
+    <!----===== Iconscout CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <title>Responsive Regisration Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>Registration</header>
+
+      <form action="#">
+        <div class="form first">
+          <div class="details personal">
+            <span class="title">Personal Details</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>Full Name <span style="color: red">*</span></label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  maxlength="40"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Date of Birth <span style="color: red">*</span></label>
+                <input type="date" placeholder="Enter birth date" required />
+              </div>
+
+              <div class="input-field">
+                <label>Email <span style="color: red">*</span></label>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  maxlength="50"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Mobile Number <span style="color: red">*</span></label>
+                <input
+                  type="tel"
+                  placeholder="Enter 10-Digit mobile number"
+                  maxlength="10"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Gender <span style="color: red">*</span></label>
+                <select required="true">
+                  <option disabled selected value="">Select gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Others</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label>Occupation <span style="color: red">*</span></label>
+                <input
+                  type="text"
+                  placeholder="Enter your occupation"
+                  maxlength="30"
+                  required
+                />
+              </div>
+            </div>
+            <div class="m" style="height: 10px"></div>
+          </div>
+
+          <div class="details address">
+            <span class="title">Address Details</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>Address <span style="color: red">*</span></label>
+                <input
+                  type="text"
+                  placeholder="Enter Your Address"
+                  maxlength="50"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Nationality <span style="color: red">*</span></label>
+                <input
+                  type="text"
+                  placeholder="Enter nationality"
+                  maxlength="30"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>State <span style="color: red">*</span></label>
+                <input
+                  type="text"
+                  placeholder="Enter your state"
+                  maxlength="30"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>District <span style="color: red">*</span></label>
+                <input
+                  type="text"
+                  placeholder="Enter your district"
+                  maxlength="25"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Village</label>
+                <input type="text" placeholder="Enter your Village name" />
+              </div>
+
+              <div class="input-field">
+                <label>Pin Code <span style="color: red;">*</span></label>
+                <input
+                  type="tel"
+                  placeholder="Enter Pincode"
+                  maxlength="6"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="nextBtn">
+            <span class="btnText">Next</span>
+            <i class="uil uil-navigator"></i>
+          </button>
+        </div>
+
+        <div class="form second">
+          <div class="details family">
+            <span class="title">Other Information</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>Program <span style="color: red;">*</span></label>
+                <select required="true">
+                  <option disabled selected value="">Select Program</option>
+                  <option>B.A</option>
+                  <option>B.Com</option>
+                  <option>B.Sc</option>
+                  <option>B.C.A</option>
+                  <option>M.A</option>
+                  <option>M.Com</option>
+                  <option>M.Sc</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label>Passing Year <span style="color: red;">*</span> (e.g. 2023 )</label>
+                <input type="tel" placeholder="YYYY" maxlength="4" required />
+              </div>
+
+              <div class="input-field">
+                <label>Current working place <span style="color: red;">*</span></label>
+                <input
+                  type="text"
+                  placeholder="Current working place"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Current working organization<span style="color: red;">*</span></label>
+                <input
+                  type="text"
+                  placeholder="Current working organization"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Current working designation</label>
+                <input
+                  type="text"
+                  placeholder="Current working designation"
+                />
+              </div>
+
+              <div class="input-field">
+                <label>What Can I Do For My College *</label>
+                <select >
+                  <option disabled selected value="">Select here</option>
+                  <option>Scholarship to student</option>
+                  <option>Library Development</option>
+                  <option>Infrastructure Development</option>
+                  <option>Laboratory updations</option>
+                  <option>Student counseling</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="m" style="height: 250px"></div>
+            <div class="buttons">
+              <div class="backBtn">
+                <i class="uil uil-navigator"></i>
+                <span class="btnText">Back</span>
+              </div>
+
+              <button class="sumbit">
+                <span class="btnText">Submit</span>
+                <i class="uil uil-navigator"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="regis.js"></script>
+  </body>
+</html>

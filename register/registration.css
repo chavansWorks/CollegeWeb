@@ -1,0 +1,234 @@
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Work Sans", sans-serif;
+}
+.carousel-item {
+  height: 650px;
+  min-height: 300px;
+}
+.carousel-item img {
+  filter: brightness(20%);
+}
+.carousel-caption {
+  bottom: 220px;
+}
+.carousel-caption h5 {
+  font-size: 54px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: var(--font-primary);
+}
+.carousel-caption h5::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #22e8f6;
+  margin: 10px auto;
+}
+
+.carousel-caption p {
+  margin-top: 10px;
+}
+.carousel-caption p {
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+  font-family: Roboto, sans-serif;
+}
+.carousel-caption a {
+  text-transform: uppercase;
+  background: #262626;
+  padding: 10px 30px;
+  display: inline-block;
+  color: #fff;
+  margin-top: 15px;
+}
+.navbar-nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  justify-content: space-between;
+  margin: 0.5rem 1rem;
+  font-family: var(--font-primary);
+}
+
+.navbar-light .navbar-brand {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+.navbar-nav {
+  text-align: center;
+}
+.active .nav-link {
+  /* Apply your specific styles for the active link here */
+  position: relative; /* Required for positioning the animated underline */
+  transition: color 0.3s; /* Add smooth color transition */
+
+  /* Add animated underline */
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px; /* Adjust as needed */
+    bottom: 2px; /* Position the underline */
+    background-color: #00aaff; /* Underline color */
+    transform: scaleX(1); /* Start with no width */
+    transform-origin: left;
+  }
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  text-decoration: none; /* Remove any default underline */
+  position: relative; /* Required for positioning the animated underline */
+  transition: color 0.3s; /* Add smooth color transition */
+  color: #ffffffa3 !important;
+  /* Add this block to animate underline on hover */
+  &:hover {
+    color: #00aaff; /* Change link color on hover */
+  }
+
+  /* Add animated underline */
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px; /* Adjust as needed */
+    bottom: 2px; /* Position the underline */
+    background-color: #00aaff; /* Underline color */
+    transform: scaleX(0); /* Start with no width */
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out; /* Add smooth transition */
+  }
+
+  /* Animate the underline width on hover */
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+.nav-link.active,
+.nav-link:focus {
+  color: #fff;
+}
+.navbar-toggler {
+  padding: 1px 5px;
+  font-size: 18px;
+  line-height: 0.3;
+  background: #fff;
+}
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+.w-100 {
+  height: 100vh;
+}
+@media only screen and (max-width: 767px) {
+  .navbar-nav.ml-auto {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .navbar-nav a {
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+
+.navbar-light {
+  background-color: transparent !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+/* Solid background after scrolling */
+.navbar-light.scrolled {
+  background-color: #333333e9 !important; /* Change this to your desired background color */
+  padding: auto !important;
+  height: 55px;
+}
+.navbar.navbar-light .navbar-nav a.nav-link {
+  margin-top: 7px; /* Adjust this value to decrease the margin */
+  transition: margin 0.3s ease-in-out;
+}
+
+/* Increase margin of anchor tags for the menu when scrolled */
+.navbar-light.scrolled .navbar-nav a.nav-link {
+  margin-top: -50px; /* Adjust this value to increase the margin */
+}
+.navbar-brand {
+  margin-bottom: 7px !important;
+  margin-top: 0%;
+}
+.navbar-light.scrolled .navbar-brand {
+  margin-bottom: 50px !important;
+  margin-top: -15px;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  min-width: 160px; /* Adjust as needed */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Show dropdown menu on hover */
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown item styles */
+.dropdown-item {
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+  font-size: 13px !important;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+  background-color: #555;
+}
+
+/* Adjust the width of dropdown items */
+.dropdown-item {
+  width: 140px; /* Adjust as needed */
+}
+
+#t1 {
+  position: absolute;
+  top: 18%;
+  left: 41%;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  font-weight: 500;
+}
+#text {
+  position: absolute;
+  top: 25%;
+  left: 43%;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
