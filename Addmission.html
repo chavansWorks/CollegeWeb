@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[College Name] Admissions</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="Assets/CSS/Main.css" rel="stylesheet" />
+    <link href="Assets/CSS/bt.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Assets/CSS/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      #t1 {
+        position: absolute;
+        top: 18%;
+        left: 42%;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      #text {
+        position: absolute;
+        top: 28%;
+        left: 45%;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+      }
+
+      .container4 {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color:  #0e2d63;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .card {
+        background-color: #e0f2ff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      p {
+        line-height: 1.6;
+        font-size: 1.1rem;
+        color: #555;
+      }
+      .button {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .button:hover {
+        background-color: #0056b3;
+      }
+      .background-section {
+        position: relative; /* Position relative for pseudo-element */
+        background-image: url("images/ace.png"); /* Replace with your image URL */
+        background-size: cover;
+        isolation: isolate;
+        
+      }
+
+      .background-section::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+      }
+
+    </style>
+  </head>
+  <body>
+    <section class="section1">
+      <img
+        src="images/2.jpeg"
+        height="280px"
+        width="100%"
+        style="filter: brightness(40%)"
+      />
+      <div id="t1" sty>Addmission</div>
+      <div id="text">
+        <a href="Index.html" style="color: white; text-decoration: none">Home</a
+        > / <a href="Addmission.html" style="color: white; text-decoration: none"
+          >Addmission</a
+        >
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="Index.html"
+            >BhavansCollege
+            <span style="color: #00aaff; font-size: 40px">.</span>
+          </a>
+          <button
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-target="#navbarSupportedContent"
+            data-toggle="collapse"
+            type="button"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="About_US.html">About Us</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="achivement.html">Achievements</a>
+                  <a class="dropdown-item" href="Contact_Us.html">Contact Us</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="AlumniRegister.html">Alumni</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="Addmission.html">Admissions</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Department</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="faculty.html">Faculties</a>
+                  <a class="dropdown-item" href="#">News and event</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link" href="Academic.html">Academic</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">New programs</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Login</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Faculty Login</a>
+                  <a class="dropdown-item" href="login.html">Student Corner</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section class="background-section">
+        <div style="height: 30px;"></div>
+    <div class="container4 ">
+      <div class="card">
+        <h2>Why Choose Bhavans College?</h2>
+        <p>
+          Discover a world of academic excellence, innovative programs, and
+          diverse opportunities at Bhavans College. Join us in shaping the future
+          together.
+        </p>
+      </div>
+      <div class="card" style="padding-left: 50px;">
+        <h2>Admissions Process</h2>
+        <ol>
+          <li>
+            Complete the online application form by 24th August, 2023.
+          </li>
+          <li>
+            Submit your academic transcripts, standardized test scores, letters
+            of recommendation, and other required documents.
+          </li>
+          <li>
+            Craft a compelling personal statement that highlights your passions,
+            achievements, and aspirations.
+          </li>
+          <!-- Additional steps -->
+        </ol>
+        <p>
+          Upon acceptance, submit the required enrollment deposit by 24th August, 2023 to secure your spot.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Financial Aid and Scholarships</h2>
+        <p>
+          We offer a range of financial aid options and merit-based scholarships
+          to help deserving students achieve their academic goals.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Visit Campus</h2>
+        <p>
+          Schedule a campus tour to experience [College Name] firsthand. Explore
+          the facilities, meet faculty members, and envision yourself as part of
+          our community.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Contact Us</h2>
+        <p>
+          If you have questions or need assistance, our admissions team is here
+          to help. Reach out to us at addmission@bhavans.ac.in or 9137849589.
+        </p>
+        <p>
+          Your future starts at Bhavans College. Join us on a journey of
+          discovery and growth.
+        </p>
+      </div>
+      <!-- Additional styled cards for each section -->
+      <!-- ... (other card sections) ... -->
+      <a class="button" href="[Application Link]">Apply Now</a>
+    </div>
+    
+    <div style="height: 30px;"></div>
+</section><div>
+      
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col" style="padding: 0 30px; width: 25%;">
+            <h4>Contact Us</h4>
+            <ul>
+              <p>
+                <p>
+                  BHARATIYA VIDYA BHAVAN’S M. M. College of Arts, N. M. Institute
+                  of Science, Andheri West, Mumbai, Maharashtra 400058
+                </p>
+                <br />
+                <p>Phone No.: 022 2625 6452</p>
+                <p>No.: 9137849589</p>
+                <p>Email: info@bhavans.ac.in</p>  
+              </p>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Important Links</h4>
+            <ul>
+              <li><a href="About_US.html">About Us</a></li>
+              <li><a href="#">Programs</a></li>
+              <li><a href="Addmission.html">Admissions</a></li>
+              <li><a href="#">Campus Life</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Get Help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="Contact_Us.html">Contact Us</a></li>
+              <li><a href="#">Support Services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col" style="width: 15%;">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="AlumniRegister.html">Alumni</a></li>
+            </ul>
+          </div>
+          <div class="footer-col" >
+            <h4>Follow Bhavans College</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/BhavansAndheri"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/bhavans_college_official/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/groups/1877578/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="Assets/JS/Main.js"></script>
+
+</body>
+</html>
