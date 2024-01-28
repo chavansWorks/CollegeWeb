@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BhavansCollege - Acedemics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="Assets/CSS/Main.css" rel="stylesheet" />
+    <link href="Assets/CSS/bt.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Assets/CSS/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      #t1 {
+        position: absolute;
+        top: 18%;
+        left: 42%;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      #text {
+        position: absolute;
+        top: 28%;
+        left: 45%;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+      }
+
+      .background-section {
+        position: relative; /* Position relative for pseudo-element */
+        background-image: url("images/ace.png"); /* Replace with your image URL */
+        background-size: cover;
+        isolation: isolate;
+        
+      }
+
+      .background-section::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 35px;
+        color: #036;
+        font-family: "PatuaOne-Regular";
+      }
+
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 20px;
+      }
+
+      .card {
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+        border-radius: 8px;
+        border: 2px solid #ddd;
+        overflow: hidden;
+        width: 380px;
+        height: 460px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 9px rgba(0, 0, 0, 0.4);
+      }
+
+      .card img {
+        width: 97%;
+        height: 50%;
+        object-fit: cover;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        margin: 5px;
+      }
+
+      .card-content {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40%;
+        width: auto;
+      }
+
+      .card-title {
+        color: #036;
+        font-family: "PatuaOne-Regular";
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      .card-description {
+        font-size: 16px;
+        color: #161616;
+        margin-bottom: 10px;
+        font-family: Verdana, Geneva, sans-serif;
+        line-height: 1.5;
+      }
+
+      .card-button {
+        background-color: #036;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        align-self: self-start;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+
+      .card-button:hover {
+        background-color: #2980b9;
+      }
+      .img3 {
+        width: 98% !important;
+        height: 50%;
+      }
+
+      .m{
+        margin-bottom: 530px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <section class="section1">
+      <img
+        src="images/2.jpeg"
+        height="280px"
+        width="100%"
+        style="filter: brightness(40%)"
+      />
+      <div id="t1" sty>Acedemics</div>
+      <div id="text">
+        <a href="Index.html" style="color: white; text-decoration: none">Home</a
+        > / <a href="Academic.html" style="color: white; text-decoration: none"
+          >Acedemics</a
+        >
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="Index.html"
+            >BhavansCollege
+            <span style="color: #00aaff; font-size: 40px">.</span>
+          </a>
+          <button
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-target="#navbarSupportedContent"
+            data-toggle="collapse"
+            type="button"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="About_US.html">About Us</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="achivement.html">Achievements</a>
+                  <a class="dropdown-item" href="Contact_Us.html">Contact Us</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="AlumniRegister.html">Alumni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Addmission.html">Admissions</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Department</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="faculty.html">Faculties</a>
+                  <a class="dropdown-item" href="#">News and event</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="nav-link" href="Academic.html">Academic</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">New programs</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Login</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Faculty Login</a>
+                  <a class="dropdown-item" href="login.html">Student Corner</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section class="background-section"><br><br>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="images/Academic1.jpg" alt="courses" />
+          <div class="card-content">
+            <h2 class="card-title">Courses, Syllabus and Admissions</h2>
+            <p class="card-description">
+              College offers Junior College, Under Graduate, Post Graduate,
+              Doctorate Studies, Certificate Courses.
+            </p>
+            <button class="card-button" style="margin-top: 15px !important">
+              Read More
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Academic2.jpg" alt="Time table & Roll call" />
+          <div class="card-content">
+            <h2 class="card-title">Time table&nbsp;& Roll call</h2>
+            <p class="card-description">
+              Discover our diverse undergraduate courses.
+            </p>
+            <button class="card-button" style="margin-top: 35px">
+              Read More
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="images/Academic3.jpg"
+            alt="Academic Calendar and Teaching Plans"
+            class="img3"
+          />
+          <div class="card-content">
+            <h2 class="card-title" style="margin-top: 0 !important">
+              Academic Calendar and Teaching Plans
+            </h2>
+            <p class="card-description">
+              Advance your career with our postgraduate programs.
+            </p>
+            <button class="card-button" style="margin-top: 20px !important">
+              Read More
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/results.jpeg" alt="Doctorate Studies" />
+          <div class="card-content">
+            <h2 class="card-title">Examinations and Results</h2>
+            <p class="card-description">
+              Stay updated with examination dates and timings, and check out the
+              latest results for your courses.
+            </p>
+            <button class="card-button" style="margin-top: 20px !important">Read More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/StudentSupport.jpg" alt="Certificate Courses" />
+          <div class="card-content">
+            <h2 class="card-title">Student Support</h2>
+            <p class="card-description">
+              Explore our comprehensive student support services designed to
+              assist you at every step of your academic journey.
+            </p>
+            <button class="card-button" style="margin-top: 20px !important">Read More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Department.jpg" alt="Certificate Courses" />
+          <div class="card-content">
+            <h2 class="card-title">Departments and Teaching Staff
+            </h2>
+            <p class="card-description">
+              Explore our comprehensive student support services designed to
+              assist you at every step of your academic journey.
+            </p>
+            <button class="card-button" style="margin-top: 20px !important" >Read More</button>
+          </div>
+        </div><br>
+        <div class="m"></div>
+      </div>
+    </section>
+    
+    <div>
+      
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col" style="padding: 0 30px; width: 25%;">
+              <h4>Contact Us</h4>
+              <ul>
+                <p>
+                  <p>
+                    BHARATIYA VIDYA BHAVAN’S M. M. College of Arts, N. M. Institute
+                    of Science, Andheri West, Mumbai, Maharashtra 400058
+                  </p>
+                  <br />
+                  <p>Phone No.: 022 2625 6452</p>
+                  <p>No.: 9137849589</p>
+                  <p>Email: info@bhavans.ac.in</p>  
+                </p>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Important Links</h4>
+              <ul>
+                <li><a href="About_US.html">About Us</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="Addmission.html">Admissions</a></li>
+                <li><a href="#">Campus Life</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Get Help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="Contact_Us.html">Contact Us</a></li>
+                <li><a href="#">Support Services</a></li>
+              </ul>
+            </div>
+            <div class="footer-col" style="width: 15%;">
+              <h4>Connect</h4>
+              <ul>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="AlumniRegister.html">Alumni</a></li>
+              </ul>
+            </div>
+            <div class="footer-col" >
+              <h4>Follow Bhavans College</h4>
+              <div class="social-links">
+                <a href="https://www.facebook.com/BhavansAndheri"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/bhavans_college_official/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/groups/1877578/"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+    </div>
+    <script src="Assets/JS/Main.js"></script>
+
+  </body>
+</html>
